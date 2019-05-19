@@ -89,7 +89,7 @@ Rcpp::List equal2(arma::mat X,arma::vec lambda,double err=10^(-5),int maxIter=10
  for (int k=0;k<nlambda;++k) {
    lam=lambda(k);
    int i=0;
-   while (((i<maxIter)&&(ee>err))|(i==0))
+   while (((i<maxIter)&&(ee>err))||(i==0))
    { Z1=aZ;
      L=arma::eye(p,p)/rho+aZ-aU;
      L=(L+L.t())/2;
